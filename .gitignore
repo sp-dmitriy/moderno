@@ -1,6 +1,9 @@
 .DS_Store
 .AppDouble
 .LSOverride
+.vs
+.vscode
 
+_maket
 app/css/
 node_modules/
