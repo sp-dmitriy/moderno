@@ -67,13 +67,13 @@
     &-title{
         margin-bottom: 10px;
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         line-height: 72px;
     }
     &-text{
         margin-bottom: 50px;
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         line-height: 30px;
     }
     &-form{
@@ -88,14 +88,14 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             // &:focus{
             //     border: 1px solid green;
             // }
             // outline: none; убрать обводку
             &::placeholder{
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
                 padding-left: 25px;
                 padding-right: 60px;
             }
@@ -158,7 +158,7 @@
         padding: 10px 30px;
         align-items: center;
         min-height: 90px;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
     }    
     &-name{
@@ -177,7 +177,7 @@
     &-price{
         font-size: 20px;
         color: $bg;
-        font-weight: 700;
+        @include f700;
     }
     &-info{
         display: flex;
@@ -202,7 +202,7 @@
         }
         span{
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
         }
     }
     &-star{
@@ -259,3 +259,110 @@
     }
 }
 // end product-slider
+
+// start adventages
+.adventages{
+    background-color: $bg;
+    padding: 110px 0;
+}
+.adventages__title{
+    color: #fff;
+}
+.adventages__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.adventages__item{
+    max-width: 370px;
+    text-align: center;
+    padding: 0 15px;
+    &:hover{
+        .adventages__item-images{
+            background-color: $green;
+        }
+        .adventages__item-title{
+            color: $green;
+        }
+        .adventages__item-images{
+            g{
+                fill: #fff;
+            }
+        }
+    }
+    &-images{
+        height: 114px;
+        width: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        transition: all .5s;
+    }
+    &-title{
+        margin-bottom: 25px;
+        font-size: 24px;
+        color: #fff;
+        @include f500;
+        transition: all .5s;
+    }
+    &-text{
+        font-size: 15px;
+    }
+}
+.icosvg-1{
+    svg{
+        width: 50px;
+    }
+}
+.icosvg-2{
+    svg{
+        width: 70px;      
+    }
+}
+.icosvg-3{
+   svg{
+       width: 86px;
+   }  
+}
+
+// end adventages
+// start author
+.author{
+    // background-image: url(../images/author-bg.jpg);
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+    }
+    &__title{
+        color:#fff;
+        font-size: 30px;
+        line-height: 30px;
+        margin-right: 45px;
+        max-width: 262px;
+        span{
+            @include f700;
+        }
+    }
+    &__link{
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+// end author
